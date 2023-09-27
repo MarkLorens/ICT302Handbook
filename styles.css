@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.navbar{
+    background-color: rgb(33,33,33);
+    padding: 50px;
+}
+
+img {
+    width: 200px;
+}
+
+.navspan
+{
+    color: white;
+    padding-left: 30px;
+    font-size: 25px;
+}
+
+.searchBar
+{
+    margin-left: 650px;
+}
+
+.browse
+{
+    color: white;
+    margin-left: 15px;
+}
+
+.redline
+{
+    background-color: rgb(204, 0, 0);
+    height: 5px;
+}
+
+.router
+{
+    background-color: rgb(33,33,33);
+    height:50;
+}
+
+.title
+{
+    background-color: rgb(204,0,0);
+    color: white;
+    display: block;
+    height: 250px;
+}
+
+.title-top
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 150px;
+}
+
+.title-middle
+{
+    margin: 0 150px;
+    border-bottom: 1px solid white;
+}
+
+.title-type
+{
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.title-bookmark
+{
+    margin-top: 10px;
+}
+
+.content
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 100px;
+}
+
+.content-left span
+{
+    color: rgb(100,100,100);
+    margin: 30px 0;
+}
+
+.content-left span, .content-middle h2{
+    display: block;
+}
+
+.content-middle
+{
+    width: 60%;
+    max-width: 990px;
+}
+
+.content-middle h2
+{
+    border-top: 1px solid black;
+    padding-top: 20px;
+    margin-top: -0.5px;
+}
+.content-right
+{
+    width:20%;
+}
+
+.content-right .block:first-child
+{
+    border-top: 1px solid black;
+}
+.content-right .block
+{
+    border-top: 1px solid rgb(241,241,241);
+    padding: 30px 10px;
+}
+
+.block span
+{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer
+{
+    background-color: black;
+    color: white;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer span
+{
+    text-align: center;
+}
