@@ -1,10 +1,13 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <title>Murdoch University Handbook</title>
 </head>
+
 <body>
     <main>
         <div class="navbar">
@@ -56,14 +59,27 @@
                 </div>
             </div>
             <div class="content-middle">
-                <div class="block"><span id="overview">Overview</span></div>
-                <div class="block"><span id="acontacts">Academic Contacts</span></div>
-                <div class="block"><span id="allofferings">All Offerings</span></div>
-                <div class="block"><span id="requisites">Requisites</span></div>
-                <div class="block"><span id="lactivities">Learning Activities</span></div>
-                <div class="block"><span id="loutcomes">Learning Outcomes</span></div>
-                <div class="block"><span id="assessments">Assessments</span></div>
-                <div class="block"><span id="ainformation">Additional Information</span></div>
+                <h2>Overview</h2>
+                <div class="overviewDetails">
+                    <span>This unit introduces key aspects of computer science including data
+                        storage and manipulation,
+                        and problem solving using
+                        a high-level programming language. Topics: the components of a modern computer system;
+                        fundamental concepts of data
+                        storage; function of operating systems; algorithms and problem solving; fundamental aspects of a
+                        programming language <span id="dots"></span><span id="more">
+                            including data types, input/output, simple selection and iteration control structures,
+                            procedural and data abstraction,
+                            one-dimensional arrays and strings.</span></span>
+                    <span onclick="readMoreFunction()" id="myReadMoreButton">Read more</span>
+                </div>
+                <h2>Academic Contacts</h2>
+                <h2>Selected Offering</h2>
+                <h2>Requisites</h2>
+                <h2>Learning Activities</h2>
+                <h2>Learning Outcomes</h2>
+                <h2>Assessments</h2>
+                <h2>Additional Information</h2>
             </div>
             <div class="content-right">
                 <div class="block">
@@ -93,4 +109,5 @@
         </div>
     </main>
 </body>
+
 </html>

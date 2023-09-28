@@ -1,14 +1,10 @@
-*{
-    box-sizing: border-box;
-}
-
-body{
+body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
 }
 
-.navbar{
-    background-color: rgb(33,33,33);
+.navbar {
+    background-color: rgb(33, 33, 33);
     padding: 50px;
 }
 
@@ -16,59 +12,50 @@ img {
     width: 200px;
 }
 
-.navspan
-{
+.navspan {
     color: white;
     padding-left: 30px;
     font-size: 25px;
 }
 
-.searchBar
-{
+.searchBar {
     margin-left: 650px;
 }
 
-.browse
-{
+.browse {
     color: white;
     margin-left: 15px;
 }
 
-.redline
-{
+.redline {
     background-color: rgb(204, 0, 0);
     height: 5px;
 }
 
-.router
-{
-    background-color: rgb(33,33,33);
-    height:50;
+.router {
+    background-color: rgb(33, 33, 33);
+    height: 50;
 }
 
-.title
-{
-    background-color: rgb(204,0,0);
+.title {
+    background-color: rgb(204, 0, 0);
     color: white;
     display: block;
     height: 250px;
 }
 
-.title-top
-{
+.title-top {
     display: flex;
     justify-content: space-between;
     padding: 25px 150px;
 }
 
-.title-middle
-{
+.title-middle {
     margin: 0 150px;
     border-bottom: 1px solid white;
 }
 
-.title-type
-{
+.title-type {
     color: black;
     background-color: white;
     border: 1px solid white;
@@ -76,81 +63,56 @@ img {
     padding: 10px 20px;
 }
 
-.title-bookmark
-{
+.title-bookmark {
     margin-top: 10px;
 }
 
-.content
-{
+.content {
     display: flex;
     justify-content: space-between;
     margin: 15px 100px;
 }
 
-.content-left .block span
-{
-    
-    padding: 15px 10px;
-}
-
-.content-left .block span:hover
-{
-    cursor: pointer;
-    background-color: rgb(232, 231, 231);
-}
-
-.content-left .block span:active
-{
-    font-weight: bold;
-}
-
-.content-left .block a
-{
-    text-decoration: none;
+.content-left span {
     color: rgb(100, 100, 100);
+    margin: 30px 0;
 }
 
-.content-left span, .content-middle span, .content-right span{
+.content-left span,
+.content-middle h2 {
     display: block;
 }
 
-.content-middle
-{
+.content-middle {
     width: 60%;
     max-width: 990px;
 }
 
-.content-middle span
-{
+.content-middle span {
     border-top: 1px solid black;
     padding-top: 20px;
     margin-top: -0.5px;
-    margin-bottom: 20px;
 }
 
-.content-right
-{
-    width:20%;
+.content-right {
+    width: 20%;
 }
 
-.content-right .block:first-child
-{
+.content-right .block:first-child {
     border-top: 1px solid black;
 }
-.content-right .block
-{
-    border-top: 1px solid rgb(241,241,241);
+
+.content-right .block {
+    border-top: 1px solid rgb(241, 241, 241);
     padding: 30px 10px;
 }
 
-.content-right .block span
-{
+.block span {
+    display: block;
     margin-bottom: 5px;
 }
 
-.footer
-{
+.footer {
     background-color: black;
     color: white;
     height: 200px;
@@ -159,7 +121,26 @@ img {
     justify-content: center;
 }
 
-.footer span
-{
+.footer span {
     text-align: center;
+}
+
+#more {
+    display: none;
+}
+
+#myReadMoreButton {
+    color: red;
+    max-height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+#myReadMoreButton:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.overviewDetails {
+    padding-bottom: 25px;
 }
