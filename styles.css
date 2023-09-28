@@ -70,7 +70,7 @@ img {
 .content {
     display: flex;
     justify-content: space-between;
-    margin: 10px 100px;
+    margin: 15px 100px;
 }
 
 .content-left span {
@@ -88,7 +88,7 @@ img {
     max-width: 990px;
 }
 
-.content-middle h2 {
+.content-middle span {
     border-top: 1px solid black;
     padding-top: 20px;
     margin-top: -0.5px;
