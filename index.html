@@ -73,7 +73,19 @@
                             one-dimensional arrays and strings.</span></span>
                     <span onclick="readMoreFunction()" id="myReadMoreButton">Read more</span>
                 </div>
-                <h2>Academic Contacts</h2>
+                <h2>Academic Contacts <span id="expandCollapseButton">Expand All</span></h2>
+                <div class="contactDetails">
+                    <button class="accordion">Unit Coordinator</button>
+                    <div class="panel">
+                        <span class="contactName">Name: Shuang Li</span>
+                        <span class="contactEmail">Email: Shuang.Li@murdoch.edu.au</span>
+                    </div>
+                    <button class="accordion">Unit Coordinator</button>
+                    <div class="panel">
+                        <span class="contactName">Name: Mike Dixon</span>
+                        <span class="contactEmail">Email: M.Dixon@murdoch.edu.au</span>
+                    </div>
+                </div>
                 <h2>Selected Offering</h2>
                 <h2>Requisites</h2>
                 <h2>Learning Activities</h2>
@@ -108,6 +120,54 @@
             <span>Footer here</span>
         </div>
     </main>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+
+        // script.js
+
+        // Track the state of sections (expanded or collapsed)
+        var isExpanded = false;
+
+        // Function to toggle the state and update the button text
+        function toggleExpandCollapse() {
+            isExpanded = !isExpanded;
+            var button = document.getElementById("expandCollapseButton");
+            var panels = document.getElementsByClassName("panel");
+
+            for (var i = 0; i < panels.length; i++) {
+                if (isExpanded) {
+                    panels[i].style.maxHeight = panels[i].scrollHeight + "px";
+                } else {
+                    panels[i].style.maxHeight = null;
+                }
+            }
+
+            if (isExpanded) {
+                button.textContent = "Collapse All";
+            } else {
+                button.textContent = "Expand All";
+            }
+        }
+
+        // Attach a click event to the button to toggle expand/collapse
+        document.getElementById("expandCollapseButton").addEventListener("click", function () {
+            toggleExpandCollapse();
+        });
+
+    </script>
 </body>
 
 </html>
