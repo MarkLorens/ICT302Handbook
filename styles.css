@@ -197,3 +197,8 @@ img {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.learningOutcomesDetails span {
+    padding-bottom: 25px;
+    display: block;
+}
