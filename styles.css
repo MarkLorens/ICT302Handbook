@@ -213,3 +213,39 @@ img {
 .practicalExamDetails {
     margin: 10px 0;
 }
+
+.arrow-down {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-right: 10px;
+}
+
+.offerings .header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid black;
+}
+
+.header span
+{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.offeringList
+{
+    position: relative;
+    display: inline-block;
+}
+
+.offeringList span
+{
+    display: block;
+}
