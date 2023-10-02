@@ -184,6 +184,36 @@ img {
     margin: 10px 0;
 }
 
+.activitesDetails {
+    padding-bottom: 25px;
+}
+
+.learningActivitiesSubHeader {
+    padding: 0 18px;
+    background-color: white;
+    display: flex;
+    max-height: 100px;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.learningActivitiesSubHeader span {
+    cursor: pointer;
+    margin-left: 10px;
+    color: red;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+.learningActivitiesSubHeader .expandCollapseButton {
+    cursor: pointer;
+    margin-left: 10px;
+    color: red;
+    font-size: 15px;
+    font-weight: normal;
+}
+
 .expandCollapseButton {
     cursor: pointer;
     margin-left: 10px;
