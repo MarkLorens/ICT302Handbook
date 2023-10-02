@@ -207,10 +207,10 @@
         var isExpanded = false;
 
         // Function to toggle the state and update the button text
-        function toggleExpandCollapse() {
+        function toggleExpandCollapse(div) {
             isExpanded = !isExpanded;
             var button = document.getElementsByClassName("expandCollapseButton");
-            var panels = document.getElementsByClassName("panel");
+            var panels = document.querySelectorAll("."+div + " .panel");
 
             for (var i = 0; i < panels.length; i++) {
                 if (isExpanded) {
@@ -229,10 +229,10 @@
 
         // Attach a click event to the button to toggle expand/collapse
         document.getElementById("expandAcademicContacts").addEventListener("click", function () {
-            toggleExpandCollapse();
+            toggleExpandCollapse("contactDetails");
         });
         document.getElementById("expandAssessments").addEventListener("click", function () {
-            toggleExpandCollapse();
+            toggleExpandCollapse("assessmentDetails");
         });
 
     </script>
