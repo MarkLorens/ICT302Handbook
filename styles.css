@@ -184,7 +184,7 @@ img {
     margin: 10px 0;
 }
 
-#expandCollapseButton {
+.expandCollapseButton {
     cursor: pointer;
     margin-left: 10px;
     color: red;
@@ -201,4 +201,15 @@ img {
 .learningOutcomesDetails span {
     padding-bottom: 25px;
     display: block;
+}
+
+.assessmentDetails {
+    padding-bottom: 25px;
+}
+
+.LMSDetails,
+.inClassDetails,
+.finalExaminationDetails,
+.practicalExamDetails {
+    margin: 10px 0;
 }

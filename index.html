@@ -73,7 +73,8 @@
                             one-dimensional arrays and strings.</span></span>
                     <span onclick="readMoreFunction()" id="myReadMoreButton">Read more</span>
                 </div>
-                <h2>Academic Contacts <span id="expandCollapseButton">Expand All</span></h2>
+                <h2>Academic Contacts <span class="expandCollapseButton" id="expandAcademicContacts">Expand All</span>
+                </h2>
                 <div class="contactDetails">
                     <button class="accordion">Unit Coordinator</button>
                     <div class="panel">
@@ -97,7 +98,65 @@
                     <span>3. Design and implement a secure network infrastructure.</span>
                     <span>4. Extend security and availability with cryptography and VPNs.</span>
                 </div>
-                <h2>Assessments</h2>
+                <h2>Assessments <span class="expandCollapseButton" id="expandAssessments">Expand All</span></h2>
+                <div class="assessmentDetails">
+                    <button class="accordion">LMS Quizes</button>
+                    <div class="panel">
+                        <span class="LMSDetails">The LMS quizzes will take place after each module and will examine the
+                            student’s understanding of the material covered
+                            in the module (Readings, Lectures and Lab exercises). Each quiz will typically consist of 10
+                            to 20 multiple choice
+                            questions and the results will be released after the due date.</span>
+                        <span class="LMSDetails"><b>Weight:</b> 10</span>
+                        <span class="LMSDetails"><b>Due:</b> Mid</span>
+                        <span class="LMSDetails"><b>Individual / Group:</b> Individual</span>
+                        <span class="LMSDetails"><b>Unit learning outcomes:</b> UNLO1, UNLO2, UNLO3, UNLO4</span>
+                    </div>
+                    <button class="accordion">In Class Exercise</button>
+                    <div class="panel">
+                        <span class="inClassDetails">The in class exercises will typically take place at the beginning
+                            of each workshop and
+                            will measure the student’s
+                            understanding of material that was covered in the previous classes. The lecturer will go
+                            over the answer(s) after the
+                            students have submitted their exercise. Students must be present to take the exercises and
+                            have them count towards their
+                            overall unit mark.</span>
+                        <span class="inClassDetails"><b>Weight:</b> 10</span>
+                        <span class="inClassDetails"><b>Due:</b> Continuous</span>
+                        <span class="inClassDetails"><b>Individual / Group:</b> Individual</span>
+                        <span class="inClassDetails"><b>Unit learning outcomes:</b> UNLO1, UNLO2, UNLO3, UNLO4</span>
+                    </div>
+                    <button class="accordion">Final Examination</button>
+                    <div class="panel">
+                        <span class="finalExaminationDetails">The final exam will be held during the University
+                            examination period. The exam will be a 3
+                            hour comprehensive exam
+                            covering all of the topics covered in the unit. The exam will be conducting using LMS and
+                            may feature multiple choice,
+                            short answer, calculation and longer answer questions. Students must pass the final exam to
+                            pass the unit.</span>
+                        <span class="finalExaminationDetails"><b>Weight:</b> 50</span>
+                        <span class="finalExaminationDetails"><b>Due:</b> Late</span>
+                        <span class="finalExaminationDetails"><b>Individual / Group:</b> Individual</span>
+                        <span class="finalExaminationDetails"><b>Unit learning outcomes:</b> UNLO1, UNLO2, UNLO3,
+                            UNLO4</span>
+                    </div>
+                    <button class="accordion">Practical Exam</button>
+                    <div class="panel">
+                        <span class="practicalExamDetails">The practical exam will be a 3 hour exam which will examine
+                            lab exercises, practical
+                            exercises and the case study. This
+                            exam will require you to troubleshoot and configure network devices under exam conditions.
+                            Students must pass the
+                            practical exam to pass the unit.</span>
+                        <span class="practicalExamDetails"><b>Weight:</b> 30</span>
+                        <span class="practicalExamDetails"><b>Due:</b> Late</span>
+                        <span class="practicalExamDetails"><b>Individual / Group:</b> Individual</span>
+                        <span class="practicalExamDetails"><b>Unit learning outcomes:</b> UNLO1, UNLO2, UNLO3,
+                            UNLO4</span>
+                    </div>
+                </div>
                 <h2>Additional Information</h2>
             </div>
             <div class="content-right">
@@ -143,15 +202,14 @@
             });
         }
 
-        // script.js
-
+        // expand collab button 1
         // Track the state of sections (expanded or collapsed)
         var isExpanded = false;
 
         // Function to toggle the state and update the button text
         function toggleExpandCollapse() {
             isExpanded = !isExpanded;
-            var button = document.getElementById("expandCollapseButton");
+            var button = document.getElementsByClassName("expandCollapseButton");
             var panels = document.getElementsByClassName("panel");
 
             for (var i = 0; i < panels.length; i++) {
@@ -170,7 +228,10 @@
         }
 
         // Attach a click event to the button to toggle expand/collapse
-        document.getElementById("expandCollapseButton").addEventListener("click", function () {
+        document.getElementById("expandAcademicContacts").addEventListener("click", function () {
+            toggleExpandCollapse();
+        });
+        document.getElementById("expandAssessments").addEventListener("click", function () {
             toggleExpandCollapse();
         });
 
