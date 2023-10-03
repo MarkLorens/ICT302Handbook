@@ -100,6 +100,24 @@
                 </div>
                 <h2>Requisites</h2>
                 <h2>Learning Activities</h2>
+                <div class="activitiesDetails" id="activitiesDetails">
+                    <div class="learningActivitiesSubHeader">
+                        <h3>Timetabled learning activities</h3>
+                        <span class="expandCollapseButton" id="expandActivities">Expand All</span>
+                    </div>
+                    <button class="accordion">Lecture</button>
+                    <div class="panel">
+                        <span class="contactName"><b>Number of sessions:</b> 1</span>
+                        <span class="contactEmail"><b>Duration:</b> 2 hours</span>
+                        <span class="contactEmail"><b>Frequency:</b> Weekly</span>
+                    </div>
+                    <button class="accordion">Tutorial</button>
+                    <div class="panel">
+                        <span class="contactName"><b>Number of sessions:</b> 1</span>
+                        <span class="contactEmail"><b>Duration:</b> 2 hours</span>
+                        <span class="contactEmail"><b>Frequency:</b> Weekly</span>
+                    </div>
+                </div>
                 <h2>Learning Outcomes</h2>
                 <div class="learningOutcomesDetails">
                     <span>1. Develop practical application of skills needed to design, implement, and support network
@@ -243,6 +261,9 @@
         });
         document.getElementById("expandAssessments").addEventListener("click", function () {
             toggleExpandCollapse("assessmentDetails");
+        });
+        document.getElementById("expandActivities").addEventListener("click", function () {
+            toggleExpandCollapse("activitiesDetails");
         });
 
     </script>
