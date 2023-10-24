@@ -1,0 +1,67 @@
+body
+{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+main
+{
+    display: flex;
+    position: relative;
+}
+
+.menu-image
+{
+    height: 100vh;
+    width: 25%;
+    opacity: 50%;
+    color: black;
+    transition: opacity 0.3s ease;
+    transition: width 0.7s ease;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-image:hover 
+{
+    opacity: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+#college-title {
+    position: absolute;
+    left: 0%;
+    
+}
+
+#major-title {
+    position: absolute;
+    left: 25%;
+}
+
+#unit-title {
+    position: absolute;
+    left: 50%;
+}
+
+#course-title {
+    position: absolute;
+    left: 75%;
+}
+
+.title
+{
+    width:25%;
+    z-index: 99;
+    top: 50%;
+    text-align: center;
+    transition: left 0.7s ease;
+    font-weight: bold;
+    font-size: 1.3em;
+}
