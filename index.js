@@ -30,10 +30,14 @@ function hoverImage(element) {
 
 function resetImages() {
     const divs = document.getElementsByClassName('menu-image');
+    const browse = document.getElementById('browse-title');
+    const generate = document.getElementById('generate-title');
     
     for(const div of divs) {
         div.style.width = '50%';
     }
+    browse.style.left = '25%';
+    generate.style.left = '75%'; 
 }
 
 function clickImage(element) {
