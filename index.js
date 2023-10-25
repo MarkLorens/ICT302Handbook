@@ -5,6 +5,8 @@ function hoverImage(element) {
     const texts = element.getElementsByClassName("title");
     const browse = document.getElementById('browse-title');
     const generate = document.getElementById('generate-title');
+    const browseBorder = document.getElementById('browse-border');
+    const generateBorder = document.getElementById('generate-border');
 
     text = texts[0];
     
@@ -17,13 +19,15 @@ function hoverImage(element) {
 
     if(text.id == 'browse-title')
     {
-        browse.style.left = '27.5%';
-        generate.style.left = '77.5%';
+        browse.style.left = '2.5%';
+        generate.style.left = '55.5%';
+        browseBorder.style.opacity = '100%';
     }
     else
     {        
-        browse.style.left = '22.5%';
-        generate.style.left = '72.5%'; 
+        browse.style.left = '-2.5%';
+        generate.style.left = '47.5%'; 
+        generateBorder.style.opacity = '100%';
     }
 }
 
@@ -32,12 +36,16 @@ function resetImages() {
     const divs = document.getElementsByClassName('menu-image');
     const browse = document.getElementById('browse-title');
     const generate = document.getElementById('generate-title');
+    const browseBorder = document.getElementById('browse-border');
+    const generateBorder = document.getElementById('generate-border');
     
     for(const div of divs) {
         div.style.width = '50%';
     }
-    browse.style.left = '25%';
-    generate.style.left = '75%'; 
+    browse.style.left = '0%';
+    generate.style.left = '50%';
+    browseBorder.style.opacity = '0%';
+    generateBorder.style.opacity = '0%';
 }
 
 function clickImage(element) {
