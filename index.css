@@ -44,12 +44,21 @@ img
     left: 50%;
 }
 
+#browse-description
+{
+    left: 0%;
+}
+
+#generate-description
+{
+    left: 50%;
+}
+
 .description 
 {
     position: absolute;
     opacity: 0%;
     top: 20%;
-    left: 0%;
 }
 
 .description span
