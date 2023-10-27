@@ -4,28 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="browse.css">
+    <script src="https://unpkg.com/swup@4"></script>
+    <script src="https://unpkg.com/@swup/head-plugin@2"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div>
-        <img src="./Assets/backLogo.png" alt="back logo" class="backLogo">
-        <img src="./Assets/murdochLogoWhite.png" alt="murdoch logo" class="murdochLogo">
-    </div>
-    <div class="handbookTitle">
-        <span>Handbook</span>
-    </div>
-    <div class="search">
-        <label for="search"></label>
-        <input type="text" id="search" placeholder="Search Course, Units, Others" class="searchBar">
-    </div>
-    <div class="advancedFilter">
-        <span>Advanced filter</span>
-    </div>
-    <div class="down">
-        <img src="./Assets/downButton.png" alt="down button" class="downButton">
-    </div>
+    <main id="swup" class="transition-swipe browse">
+        <div>
+            <a href="/index.html"><img src="./Assets/backLogo.png" alt="back logo" class="backLogo"></a>
+            <img src="./Assets/murdochLogoWhite.png" alt="murdoch logo" class="murdochLogo">
+        </div>
+        <div class="handbookTitle">
+            <span>Handbook</span>
+        </div>
+        <div class="search">
+            <label for="search"></label>
+            <input type="text" id="search" placeholder="Search Course, Units, Others" class="searchBar">
+        </div>
+        <div class="advancedFilter">
+            <span>Advanced filter</span>
+        </div>
+        <div class="down">
+            <img src="./Assets/downButton.png" alt="down button" class="downButton">
+        </div>
+    </main>
 </body>
 
 </html>

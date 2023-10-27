@@ -1,0 +1,181 @@
+/* Transition Styling */
+html.is-animating {
+    background: black;
+    /* Change the color to your preferred background color */
+}
+
+html.is-leaving {
+    background: url(/Assets/Browse-Image.png);
+    /* Set a background image */
+    background-size: cover;
+    transition: 0s;
+}
+
+.transition-swipe
+{
+    transition: 500ms;
+    transform: translateX(0);
+}
+
+html.is-animating .transition-swipe
+{
+    transform: translateX(-100%);
+}
+
+html.is-leaving .transition-swipe
+{
+    transform: translateX(100%);
+}
+/* End of Transition */
+
+/* global */
+body
+{
+    margin: 0;
+    font-family: sans-serif;
+}
+/* end of global */
+
+/* Index.html Styling */
+main.index{
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
+
+.menu-image {
+    width: 50%;
+    opacity: 80%;
+    transition: opacity 0.6s ease, width 0.7s ease, color 0.7s ease;
+}
+
+.menu-container
+{
+    height: 100%;
+}
+
+.index-images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-image:hover {
+    opacity: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+#browse-title {
+    position: absolute;
+    left: 0%;
+}
+
+#generate-title {
+    position: absolute;
+    left: 50%;
+}
+
+#browse-description {
+    left: 0%;
+}
+
+#generate-description {
+    left: 50%;
+}
+
+.description {
+    position: absolute;
+    top: 20%;
+    opacity: 0%;
+}
+
+.description span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.title {
+    width: 50%;
+    z-index: 99;
+    bottom: 2%;
+    text-align: center;
+    transition: left 0.7s ease, opacity 0.7s ease, top 0.8s ease;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+#browse-border {
+    top: 47%;
+    left: 24%;
+    padding: 33px 50px;
+}
+
+#generate-border {
+    top: 47%;
+    left: 68.3%;
+    padding: 33px 60px;
+}
+
+/* End of index.html styling */
+
+/* Browse.html styling */
+main.browse {
+    padding: 10px;
+    padding-top: 20px;
+    background-image: url(./Assets/Browse-Image.png);
+}
+
+.backLogo {
+    width: 50px;
+    padding-bottom: 100px;
+    padding-left: 5px;
+}
+
+.murdochLogo {
+    width: 200px;
+    padding-bottom: 100px;
+    padding-left: 1150px;
+}
+
+.handbookTitle {
+    font-size: 80px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.search {
+    padding-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.searchBar {
+    width: 500px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+}
+
+.advancedFilter {
+    color: white;
+    font-family: sans-serif;
+    padding-top: 10px;
+    padding-left: 860px;
+}
+
+.down {
+    text-align: center;
+    padding-top: 255px;
+}
+
+.downButton {
+    width: 50px;
+}
+/* End of Browse.html styling */

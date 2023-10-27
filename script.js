@@ -1,3 +1,5 @@
+const swup = new Swup();
+
 function hoverImage(element) {
     const images = document.querySelectorAll('.menu-image');
     element.style.width = '55%';
