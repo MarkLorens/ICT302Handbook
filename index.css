@@ -57,8 +57,8 @@ img
 .description 
 {
     position: absolute;
-    opacity: 0%;
     top: 20%;
+    opacity: 0%;
 }
 
 .description span
