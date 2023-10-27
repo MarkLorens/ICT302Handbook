@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <style>
+
+            p {
+                font-family: 'Open Sans', 'Arial';
+                font-weight: 300;
+            }
+
+            li {
+                font-family: 'Open Sans', 'Arial';
+                font-weight: 300;
+                text-align: justify;
+            }
+
+            .header{
+                display: flex;
+                background-color: none;
+                height: 15%;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 20px;
+                background-image: url(Assets/Browse-Image.png);
+            }
+
+            body { 
+                margin: 0px;
+                background-color: lightgrey;
+                background-size: cover;
+                height: 100%;
+            }
+
+            .body{
+                display: flex;
+                justify-content: space-between;
+                background-color: lightgrey;
+                text-align: center;
+                height: 85%;
+            }
+
+            .logo {
+                width: 100px;
+                padding-right: 10px;
+            }
+
+            .backArrow {
+                width: 40px;
+                padding-left: 10px;
+            }
+
+            .backArrow:hover{
+                cursor: pointer;
+            }
+
+            .right-section-body {
+                flex: 1;
+                max-width: 315px;
+                width: 315px;
+                background-color: rgb(39, 37, 37);
+                border-right-style: solid;
+                border-right-color: lightcoral;
+                opacity: 85%;
+                transition: opacity 0.6s ease, width 0.7s ease, color 0.7s ease;
+                position: sticky;
+            }
+
+           
+            .right-section-body:hover {
+                opacity: 100%;
+            }
+            
+            .middle-section-body {
+                flex: 1;
+                background-color: white;
+                padding-left: 40px;
+                padding-right: 10px;
+                
+
+            }
+
+            .left-section-body {
+                width: 100px;
+                
+            }
+
+            .overview-div{
+                text-align: left;
+                padding-left: 5px;
+            }
+
+            .overview {
+                font-size: 20px;
+                display: inline-block;
+                font-weight: 600;
+            }
+
+            .overview-par-div {
+                display: inline-block;
+                text-align: left;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 0px;
+                margin-top: 0px;
+                height: 500px;
+            }
+
+            .img-overview-div {
+                display: inline-block;
+                vertical-align: top;
+
+            }
+
+            .img-overview {
+                width: 300px;
+                vertical-align: top;
+                padding-left: 5px;
+            }
+
+            .overview-par {
+                text-align: justify;
+                padding-left: 5px;
+            }
+
+            .middle-section-else {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                height: 500px;
+            }
+
+            .middle-section-div2{
+                display: inline-block;
+                text-align: left;
+                padding-left: 5px;
+                height: 500px;
+            }
+
+            .navigation-overview-div {
+                padding-left: 20px;
+                font-weight: 300;
+                color: white;
+                text-align: left;
+            }
+
+            .About-This-Course {
+                font-size: 20px;
+                font-weight: 500;
+                color: white;
+            }
+
+            .Navigation-rightSection{
+                display: inline-block;
+            }
+
+            .Navigation-rightSection:hover {
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: 600;
+            }
+
+            .About {
+                text-align: left;
+                padding-left: 10px;
+            }
+
+            .contact-div {
+                
+                text-align: left;
+                
+            }
+
+            .flex-for-contact {
+                display: flex;
+                
+            }
+
+            .centre-dot-contact {
+                padding-left: 20px;
+            }
+
+            .Contact {
+                padding-left: 10px;
+                padding-bottom: 10px;
+                color: white;
+            }
+
+            .Currently-enrolled-student {
+                margin: 0px;
+                padding: 0px;
+                color: #666;
+                font-style: italic;
+                padding-left: 10px;
+                color: white;
+            }
+
+            .Link-contact {
+                text-decoration: underline;
+                color: red;
+            }
+
+            .Link-contact:hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .navigation-div {
+                text-align: center;
+                height: 64px;
+            }
+
+            .navigaiton-par{
+                font-weight: 600;
+                color: white;
+                display: inline-block;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .UC-div {
+                text-align: left;
+                padding-left: 10px;
+            }
+
+            .UC-label-par {
+                font-size: 20px;
+                font-weight: 500;
+                color: white;
+                margin-bottom: 8px;
+            }
+
+            .UC-Name-par {
+                color: white;
+                padding-left: 10px;
+                padding-top: 0px;
+                margin-top: 8px;
+            }
+
+            .unit-title {
+                height: 70px;
+                text-align: left;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+            }
+
+            .unit-title-par {
+                font-size:25px;
+                font-weight: 600;
+                display: inline-block;
+            }
+
+            .entry-div{
+                text-align: left;
+                
+            }
+
+            .list-1 {
+                margin-bottom: 10px;
+            }
+
+            .course-structure-div{
+                text-align: left;
+            }
+
+            .Additional-rules-par{
+                font-weight: 500;
+            }
+
+            .list-2{
+                margin-bottom: 30px;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        
+        <div class="header">
+            <div class="right-section">
+                <img class="backArrow" src="Assets/backLogo.png">
+            </div>
+ 
+            <div class="left-section">
+                <img class="logo" src="Assets/murdochLogoWhite.png">
+            </div>
+        </div>        
+
+        <div class="body">
+            
+            <div class="right-section-body">
+                <div class="navigation-div">
+                    <p class="navigaiton-par">
+                        Navigation
+                    </p>
+                </div>
+    
+                <div class="About">
+                    <p class="About-This-Course">
+                        About this Course
+                    </p>
+                </div>
+    
+                <div class="navigation-overview-div">
+                    <p class="Navigation-rightSection">
+                        Overview
+                    </p>    
+                </div>
+    
+                <div class="navigation-overview-div">
+                    <p class="Navigation-rightSection">
+                        Entry And participation requirements
+                    </p>    
+                </div>
+    
+                <div class="navigation-overview-div">
+                    <p class="Navigation-rightSection">
+                        Attributes, outcomes and skills
+                    </p>    
+                </div>
+    
+                <div class="navigation-overview-div">
+                    <p class="Navigation-rightSection">
+                        Course Structure
+                    </p>    
+                </div>
+    
+                <div class="navigation-overview-div">
+                    <p class="Navigation-rightSection">
+                        Majors, minors and specialisations
+                    </p>    
+                </div>
+    
+                <div class="navigation-overview-div">
+                    <p class="Navigation-rightSection">
+                        Further study
+                    </p>    
+                </div>
+    
+                <div class="navigation-overview-div">
+                    <p class="Navigation-rightSection">
+                        Notes
+                    </p>    
+                </div>
+    
+    
+    
+                <div class="contact-div">
+                    <p class="Contact">
+                        Contact
+                    </p>
+    
+                    <p class="Currently-enrolled-student">
+                        Currently enrolled students:
+                    </p>
+    
+                    <div class="flex-for-contact">
+                        <div class="centre-dot-contact">
+                            <p>
+                                &bull;
+                            </p>
+                        </div>
+    
+                        <div class="Link-contact">
+                            <p>
+                                Contact Stop 1
+                            </p>
+                        </div>
+                        
+                    </div>
+                    
+                    <p class="Currently-enrolled-student">
+                        Future Students:
+                    </p>
+    
+                    <div class="flex-for-contact">
+                        <div class="centre-dot-contact">
+                            <p>
+                                &bull;
+                            </p>
+                        </div>
+    
+                        <div class="Link-contact">
+                            <p>
+                                A link later
+                            </p>
+                        </div>
+                        
+                    </div>
+    
+    
+                </div>
+    
+                <div class= "UC-div">
+                    <div>
+                        <p class="UC-label-par">
+                            Unit Coordinator 
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <p class="UC-Name-par">
+                            Dennis Adiputra
+                        </p>
+                    </div>
+    
+                </div>
+    
+            </div>
+
+            <div class="middle-section-body">
+                
+                <div class="unit-title">
+                    <p class="unit-title-par">
+                        ICT302 - IT Professional Practice Project
+                    </p>
+                </div>
+
+                <div class="overview-div">
+                    <p class="overview">
+                        Overview
+                    </p>
+                </div>
+
+                <div class="middle-section-else">
+                    <div class="overview-par-div">
+                        <p class="overview-par">
+                            The Bachelor of Commerce (BCom) at Melbourne equips graduates with the knowledge and technical skills necessary to understand and participate in the modern business world. The course also prepares students for subsequent graduate studies and allows them to achieve the highest level of success in their professional careers.
+                        </p>
+
+                        <p class="overview-par">
+                            The Bachelor of Commerce provides a solid foundation in economics, accounting, finance, quantitative methods and organisational behaviour. The structure of the course requires students to study compulsory and elective subjects from the core program. These determine a student's major field of study.
+                        </p>
+
+
+                    </div>      
+                    
+                    <div class="middle-section-div2">
+                        <img class="img-overview" src="Assets/table.png">
+                    </div>
+
+                    
+                </div>
+
+                <div class="entry-div">
+                    <div class="title-entry-div">
+                        <p class="overview">
+                            Entry And participation requirements
+                        </p>
+
+                        
+                    </div>
+
+                    <div class="entry-decs-div">
+                        <p class="overview-par">
+                            1. In order to be considered for entry, applicants must have completed: one of<br>
+                            (a) the Victorian Certificate of Education including
+
+                            <ul role="list">
+                                <li>VCE Units 3 and 4 - either a study score of at least 25 in one of English, English Language or Literature or a study score of at least 30 in English as an Additional Language;</li>
+                            </ul>
+                        </p>
+
+                        <div>
+                            <p>
+                                (b) the International Baccalaureate Diploma including
+                            </p>
+
+                            <ul role="list">
+                                <li>at least Grade 4 in English or English B (Standard Level or Higher Level);</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p>
+                                (c) a senior secondary program, foundation studies program or equivalent approved by the Academic Board including appropriate English language studies.
+                                Except for applicants eligible for Access Melbourne, minimum ATAR or equivalent overall performance rankings apply.
+                                Meeting these requirements does not guarantee selection<br>
+                                2. In ranking applications, the Selection Committee will consider:
+                            </p>
+
+                            <ul role="list">
+                                <li>prior academic performance.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p>
+                                3. The Selection Committee may seek further information to clarify any aspect of an application in accordance with the Academic Board on the use of selection instruments.
+                            </p>
+                        </div>
+
+                        <div class="no-4">
+                            <p>
+                                4. For applicants who have not completed the Victorian Certificate of Education or the International Baccalaureate Diploma, the undergraduate English language requirements must be met.
+                                Note.
+                            </p>
+
+                            <ul role="list">
+                                <li class="list-1">For applications through the Victorian Tertiary Admission Centre, “middle band” selection adjustments are made only on the basis of eligibility for Access Melbourne.</li>
+                                <li>Mathematical knowledge equivalent to VCE Mathematical Methods (CAS) Units 3 and 4 with a study score of 25 or more is required for the following majors: Construction, Civil Systems, Mechanical Systems, Property, Digital Infrastructure Engineering Systems, Computing and Software Systems.</li>
+                            </ul>
+
+                            <p>
+                                Students intending to pursue one of these majors should take VCE Mathematical Methods (CAS) Units 3 and 4 or an equivalent subject. A bridging subject will be available for students who have done VCE Mathematical Methods Units 1 and 2 but not VCE Mathematical Methods Units 3 and 4 or students who have received a study score below 25 in VCE Mathematical Methods Units 3 and 4.
+                            </p>
+                        </div>
+
+
+
+                    </div>                    
+                </div>
+
+                <div class="course-structure-div">
+                    
+                    <div>
+                        <p class="overview">
+                            Course structure
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            The Bachelor of Design requires the successful completion of 300 credit points.
+                        </p>
+                    </div>
+
+                    <div>
+                        <ul role="list">
+                            <li>225 credit points of Design subjects including</li>
+                            <ul role="list">
+                                <li>A minimum of 62.5 credit points of Level 1 discipline subjects</li>
+                                <li>A minimum of 62.5 credit points of Level 2 discipline subjects</li>
+                                <li>A minimum of 75 credit points of Level 3 discipline subjects</li>
+                            </ul>
+                            <li>50 credit points of Breadth subjects including</li>
+                            <ul role="list">
+                                <li>A maximum of 37.5 credit points of Level 1 breadth subjects</li>
+                            </ul>
+                            <li>25 credit points of free subjects (discipline or breadth)</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="Additional-rules-par">
+                            Additional rules
+                        </p>
+
+                        <ul role="list">
+                            <li>A maximum of 125 credit points of Level 1 subjects</li>
+                            <li>Completion of between one and two prescribed majors</li>
+                        </ul>
+
+                    </div>
+
+                    <div>
+                        <p class="Additional-rules-par">
+                            Progression rules
+                        </p>
+
+                        <ul role="list">
+                            <li class="list-2">All students must complete the compulsory Joining Melbourne modules in their first year of enrolment in the Bachelor of Design before being allowed to progress to the second year of enrolment.</li>
+                            <li>Completion of at least 50 points of Level 1 study before proceeding to the next subject year level.</li>
+                            <li>Completion of at least 50 points of Level 2 study before proceeding to the next subject year level.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="Additional-rules-par">
+                            Electives
+                        </p>
+
+                        <p>
+                            Electives are chosen from any subject offered within the Bachelor of Design. Prerequisites for some subjects will apply. Please check subject Handbook entries for prerequisite requirements.
+                        </p>
+                    </div>
+
+                </div>
+        
+                 
+            </div>
+             
+                 
+        </div>
+        
+    </body>
+</html>
