@@ -13,24 +13,25 @@
 
 <body>
     <main id="swup" class="transition-swipe browse">
-        <div>
-            <a href="./index.html"><img src="./Assets/backLogo.png" alt="back logo" class="backLogo"></a>
+        <div class="browse-header">
+            <a href="./index.html"><img src="./Assets/backLogo.png" alt="back logo" class="backButton"></a>
             <img src="./Assets/murdochLogoWhite.png" alt="murdoch logo" class="murdochLogo">
         </div>
-        <div class="handbookTitle">
-            <span>Handbook</span>
+        <div class="browse-content">
+            <div class="handbookTitle">
+                <span>Handbook</span>
+            </div>
+            <div class="search">
+                <label for="search"></label>
+                <input type="text" id="search" placeholder="Search Course, Units, Others" class="searchBar">
+                <span class="advancedFilter">Advanced filter</span>
+            </div>
         </div>
-        <div class="search">
-            <label for="search"></label>
-            <input type="text" id="search" placeholder="Search Course, Units, Others" class="searchBar">
-        </div>
-        <div class="advancedFilter">
-            <span>Advanced filter</span>
-        </div>
-        <div class="down">
-            <img src="./Assets/downButton.png" alt="down button" class="downButton">
+        <div class="browse-footer">
+            <div class="browse-down">
+                <img src="./Assets/downButton.png" alt="down button" class="downButton">
+            </div>
         </div>
     </main>
 </body>
-
 </html>
