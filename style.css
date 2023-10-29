@@ -42,7 +42,7 @@ main.index{
     height: 100vh;
 }
 
-.menu-image {
+.menu-image-index {
     width: 50%;
     opacity: 80%;
     transition: opacity 0.6s ease, width 0.7s ease, color 0.7s ease;
@@ -59,7 +59,7 @@ main.index{
     object-fit: cover;
 }
 
-.menu-image:hover {
+.menu-image-index:hover {
     opacity: 100%;
     color: white;
     cursor: pointer;
@@ -94,7 +94,7 @@ main.index{
     margin-bottom: 10px;
 }
 
-.title {
+.title-index {
     width: 50%;
     z-index: 99;
     bottom: 2%;
@@ -190,3 +190,65 @@ main.browse {
     width: 50px;
 }
 /* End of Browse.html styling */
+
+/* Category.html Styling */
+main.category
+{
+    display: flex;
+    position: relative;
+}
+
+.menu-image
+{
+    height: 100vh;
+    width: 25%;
+    opacity: 80%;
+    color: black;
+    transition: opacity 0.6s ease, width 0.7s ease, color 0.7s ease;
+}
+.category-images
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-image:hover 
+{
+    opacity: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+#college-title {
+    position: absolute;
+    left: 0%;
+    
+}
+
+#major-title {
+    position: absolute;
+    left: 25%;
+}
+
+#unit-title {
+    position: absolute;
+    left: 50%;
+}
+
+#course-title {
+    position: absolute;
+    left: 75%;
+}
+
+.title
+{
+    width:25%;
+    z-index: 99;
+    top: 50%;
+    text-align: center;
+    transition: left 0.7s ease;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+/* End of Category.html */
