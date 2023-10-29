@@ -5,7 +5,6 @@ html.is-animating {
 }
 
 html.is-leaving {
-    background: url(/Assets/Browse-Image.png);
     /* Set a background image */
     background-size: cover;
     transition: 0s;
@@ -123,36 +122,44 @@ main.index{
 
 /* Browse.html styling */
 main.browse {
-    padding: 10px;
-    padding-top: 20px;
     background-image: url(./Assets/Browse-Image.png);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.backLogo {
+.browse-header
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex: 0 0 10%;
+}
+
+.browse-content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.backButton {
     width: 50px;
-    padding-bottom: 100px;
-    padding-left: 5px;
 }
 
 .murdochLogo {
     width: 200px;
-    padding-bottom: 100px;
-    padding-left: 1150px;
+    height: 50px;
 }
 
 .handbookTitle {
     font-size: 80px;
     font-weight: bold;
-    font-family: sans-serif;
     color: white;
-    text-align: center;
-    padding-top: 70px;
-}
-
-.search {
-    padding-top: 20px;
-    text-align: center;
-    margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .searchBar {
@@ -164,15 +171,19 @@ main.browse {
 }
 
 .advancedFilter {
+    display: block;
     color: white;
-    font-family: sans-serif;
-    padding-top: 10px;
-    padding-left: 860px;
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 10px;
 }
 
-.down {
-    text-align: center;
-    padding-top: 255px;
+.browse-footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 0 0 25%;
 }
 
 .downButton {
