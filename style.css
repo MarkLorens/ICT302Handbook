@@ -1,0 +1,254 @@
+/* Transition Styling */
+html.is-animating {
+    background: black;
+    /* Change the color to your preferred background color */
+}
+
+html.is-leaving {
+    /* Set a background image */
+    background-size: cover;
+    transition: 0s;
+}
+
+.transition-swipe
+{
+    transition: 500ms;
+    transform: translateX(0);
+}
+
+html.is-animating .transition-swipe
+{
+    transform: translateX(-100%);
+}
+
+html.is-leaving .transition-swipe
+{
+    transform: translateX(100%);
+}
+/* End of Transition */
+
+/* global */
+body
+{
+    margin: 0;
+    font-family: sans-serif;
+}
+/* end of global */
+
+/* Index.html Styling */
+main.index{
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
+
+.menu-image-index {
+    width: 50%;
+    opacity: 80%;
+    transition: opacity 0.6s ease, width 0.7s ease, color 0.7s ease;
+}
+
+.menu-container
+{
+    height: 100%;
+}
+
+.index-images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-image-index:hover {
+    opacity: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+#browse-title {
+    position: absolute;
+    left: 0%;
+}
+
+#generate-title {
+    position: absolute;
+    left: 50%;
+}
+
+#browse-description {
+    left: 0%;
+}
+
+#generate-description {
+    left: 50%;
+}
+
+.description {
+    position: absolute;
+    top: 20%;
+    opacity: 0%;
+}
+
+.description span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.title-index {
+    width: 50%;
+    z-index: 99;
+    bottom: 2%;
+    text-align: center;
+    transition: left 0.7s ease, opacity 0.7s ease, top 0.8s ease;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+#browse-border {
+    top: 47%;
+    left: 24%;
+    padding: 33px 50px;
+}
+
+#generate-border {
+    top: 47%;
+    left: 68.3%;
+    padding: 33px 60px;
+}
+
+/* End of index.html styling */
+
+/* Browse.html styling */
+main.browse {
+    background-image: url(./Assets/Browse-Image.png);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.browse-header
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex: 0 0 10%;
+}
+
+.browse-content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.backButton {
+    width: 50px;
+}
+
+.murdochLogo {
+    width: 200px;
+    height: 50px;
+}
+
+.handbookTitle {
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.searchBar {
+    width: 500px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+}
+
+.advancedFilter {
+    display: block;
+    color: white;
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.browse-footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 0 0 25%;
+}
+
+.downButton {
+    width: 50px;
+}
+/* End of Browse.html styling */
+
+/* Category.html Styling */
+main.category
+{
+    display: flex;
+    position: relative;
+}
+
+.menu-image
+{
+    height: 100vh;
+    width: 25%;
+    opacity: 80%;
+    color: black;
+    transition: opacity 0.6s ease, width 0.7s ease, color 0.7s ease;
+}
+.category-images
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-image:hover 
+{
+    opacity: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+#college-title {
+    position: absolute;
+    left: 0%;
+    
+}
+
+#major-title {
+    position: absolute;
+    left: 25%;
+}
+
+#unit-title {
+    position: absolute;
+    left: 50%;
+}
+
+#course-title {
+    position: absolute;
+    left: 75%;
+}
+
+.title
+{
+    width:25%;
+    z-index: 99;
+    top: 50%;
+    text-align: center;
+    transition: left 0.7s ease;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+/* End of Category.html */
