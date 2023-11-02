@@ -25,6 +25,21 @@ html.is-leaving .transition-swipe
 {
     transform: translateX(100%);
 }
+
+.transition-swipe-up
+{
+    transition: 500ms;
+    transform: translateY(0);
+}
+
+html.is-animating .transition-swipe-up
+{
+    transform: translateY(-100%);
+}
+
+html.is-animating .transition-swipe-up {
+    transform: translateY(100%);
+}
 /* End of Transition */
 
 /* global */
@@ -97,11 +112,11 @@ main.index{
 .title-index {
     width: 50%;
     z-index: 99;
-    bottom: 2%;
+    top: 5%;
     text-align: center;
     transition: left 0.7s ease, opacity 0.7s ease, top 0.8s ease;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: white;
     text-shadow: 2px 2px black;
 }
@@ -203,8 +218,8 @@ main.category
     height: 100vh;
     width: 25%;
     opacity: 80%;
-    color: black;
-    transition: opacity 0.6s ease, width 0.7s ease, color 0.7s ease;
+    color: white;
+    transition: opacity 0.6s ease, width 0.7s ease;
 }
 .category-images
 {
@@ -249,6 +264,7 @@ main.category
     text-align: center;
     transition: left 0.7s ease;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.5em;
+    text-shadow: 2px 2px black;
 }
 /* End of Category.html */

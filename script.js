@@ -1,5 +1,18 @@
+/* Transitions */
 const swup = new Swup();
 
+function swipeDown()
+{
+    document.querySelector("main#swup").classList.remove("transition-swipe");
+    ocument.querySelector("main#swup").classList.add("transition-swipe-up");
+}
+
+function swipeLeft()
+{
+    document.querySelector("main#swup").classList.remove("transition-swipe-up");
+    ocument.querySelector("main#swup").classList.add("transition-swipe");
+}
+/* End of Transitions */
 function hoverImage(element) {
     const images = document.querySelectorAll('.menu-image-index');
     element.style.width = '55%';
@@ -82,6 +95,7 @@ function hoverImageCategory(element) {
     if(text.id === 'college-title')
     {
         college.style.left = '1.5%';
+        college.style.textDecoration = 'Underline';
         major.style.left = '27%';
         unit.style.left = '52%';
         course.style.left = '75.5%';
@@ -90,6 +104,7 @@ function hoverImageCategory(element) {
     {
         college.style.left = '-1%';
         major.style.left = '25.5%';
+        major.style.textDecoration = 'Underline';
         unit.style.left = '52%';
         course.style.left = '75.5%';   
     }
@@ -98,6 +113,7 @@ function hoverImageCategory(element) {
         college.style.left = '-1%';
         major.style.left = '23.5%';
         unit.style.left = '49.75%';
+        unit.style.textDecoration = 'Underline';
         course.style.left = '75.5%';
     }
     else if(text.id === 'course-title')
@@ -106,6 +122,7 @@ function hoverImageCategory(element) {
         major.style.left = '23.5%';
         unit.style.left = '47%';
         course.style.left = '74%';
+        course.style.textDecoration = 'Underline';
     }
     else
     {
@@ -129,4 +146,8 @@ function resetImagesCategory() {
     major.style.left = '25%';
     unit.style.left = '50%';
     course.style.left = '75%';
+    college.style.textDecoration = 'none';
+    major.style.textDecoration = 'none';
+    unit.style.textDecoration = 'none';
+    course.style.textDecoration = 'none';
 }
