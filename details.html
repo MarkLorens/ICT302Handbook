@@ -270,15 +270,20 @@
 
             .entry-div{
                 text-align: left;
-                
+                display: none;
+            }
+
+            .is-pressed {
+                display: block !important;
             }
 
             .list-1 {
                 margin-bottom: 10px;
             }
 
-            .course-structure-div{
+            .course-div{
                 text-align: left;
+                display: none;
             }
 
             .Additional-rules-par{
@@ -287,6 +292,18 @@
 
             .list-2{
                 margin-bottom: 30px;
+            }
+
+            .overview-title-par{
+                font-family: 600;
+            }
+
+            .pressed-other{
+                display: none;
+            }
+
+            .is-pressed-course{
+                display: contents;
             }
 
 
@@ -320,43 +337,61 @@
                 </div>
     
                 <div class="navigation-overview-div">
-                    <p class="Navigation-rightSection">
+                    <p class="Navigation-rightSection" onclick="
+                        display('Overview');
+                        displayContent('middle-section-else');
+                    ">
                         Overview
                     </p>    
                 </div>
     
                 <div class="navigation-overview-div">
-                    <p class="Navigation-rightSection">
+                    <p class="Navigation-rightSection" onclick="
+                        displayContent('entry-div');
+                        removeOverview();
+                        
+                    ">
                         Entry And participation requirements
                     </p>    
                 </div>
     
                 <div class="navigation-overview-div">
-                    <p class="Navigation-rightSection">
+                    <p class="Navigation-rightSection"  onclick="
+                           display('Attributes, outcomes and skills');
+                        ">
                         Attributes, outcomes and skills
                     </p>    
                 </div>
     
                 <div class="navigation-overview-div">
-                    <p class="Navigation-rightSection">
+                    <p class="Navigation-rightSection" onclick="
+                        removeOverview();
+                        displayContent('course-div');
+                    ">
                         Course Structure
                     </p>    
                 </div>
     
                 <div class="navigation-overview-div">
-                    <p class="Navigation-rightSection">
+                    <p class="Navigation-rightSection" onclick="
+                        display('Majors, minors and specialisations');
+                    ">
                         Majors, minors and specialisations
                     </p>    
                 </div>
     
                 <div class="navigation-overview-div">
-                    <p class="Navigation-rightSection">
+                    <p class="Navigation-rightSection" onclick="
+                        display('Further study');
+                    ">
                         Further study
                     </p>    
                 </div>
     
                 <div class="navigation-overview-div">
-                    <p class="Navigation-rightSection">
+                    <p class="Navigation-rightSection" onclick="
+                        display('Notes');
+                    ">
                         Notes
                     </p>    
                 </div>
@@ -435,7 +470,7 @@
                 </div>
 
                 <div class="overview-div">
-                    <p class="overview">
+                    <p class="overview-title-par">
                         Overview
                     </p>
                 </div>
@@ -526,10 +561,10 @@
 
 
 
-                    </div>                    
+                    </div>
                 </div>
 
-                <div class="course-structure-div">
+                <div class="course-div">
                     
                     <div>
                         <p class="overview">
@@ -600,6 +635,23 @@
              
                  
         </div>
+
+        <script>
+            function display(attributesName) {
+                document.querySelector('.overview-title-par').innerHTML = attributesName;
+            }
+
+            function displayContent(divName){
+                document.querySelector(`.${divName}`).classList.add('is-pressed');
+            }
+
+            function removeOverview(){
+                document.querySelector('.middle-section-else').classList.add('pressed-other');
+
+                document.querySelector('.overview-div').classList.add('pressed-other');
+            }
+
+        </script>
         
     </body>
     <script>
