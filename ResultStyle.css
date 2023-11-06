@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-image: url("./Assets/Browse-Image.png");
     background-repeat: no-repeat;
@@ -10,7 +11,8 @@ body {
     background-attachment: fixed;
     margin: 0;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
+    font-size: 16px;
 }
 
 header {
@@ -19,13 +21,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
+    height: 15%;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 85%;
 }
 
 
@@ -37,8 +39,8 @@ main {
 .result-box {
     display: flex;
     flex-direction: column;
-    height: 85%;
-    background-color: rgb(211, 211, 211);
+    flex: 1;
+    background-color: rgba(211, 211, 211, 0.8);
     padding: 1em;
     
 }
@@ -58,11 +60,12 @@ main {
 
 .result {
     width: 25%;
-    height: 30%;
-    background-color: white;
+    height: 20%;
+    background-color: rgba(255, 255, 255 , 0.9);
     position: relative;
-    overflow: hidden;
-    border: 3px solid rgb(105, 43, 43);
+    overflow: auto;
+    border: 2px solid rgba(100, 100, 100, 0.8);
+    
 }
 
 .results-container::after{
@@ -74,19 +77,38 @@ main {
 .arrow-right {
     display: flex;
     position: absolute;
-    color: blue;
-    bottom: 0.5em;
-    right: 0.5em;
+    padding: 0.5em;
+    bottom: 0;
+    right: 0;
+    color: rgba(0, 102, 204, 0.9);
 }
 
 .result-header {
-    font-size: 32px;
+    color: rgba(50, 50, 50, 0.9);
+    font-size: 2rem;
     display: block;
     margin-left: 2em;
 }
 
-.result span {
-    color: rgb(172, 35, 35);
-    font-size: 2rem;
+.result-title {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0.5em;
+    max-width: 85%;
+    max-height: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgba(50, 50, 50, 0.9);
 }
 
+.result-details {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0.5em;
+    max-width: 85%;
+    max-height: 50%;
+    font-size: 0.8rem;
+    color: rgba(50, 50, 50, 0.9);
+}
