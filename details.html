@@ -270,7 +270,6 @@
 
             .entry-div{
                 text-align: left;
-                display: none;
             }
 
             .is-pressed {
@@ -283,7 +282,6 @@
 
             .course-div{
                 text-align: left;
-                display: none;
             }
 
             .Additional-rules-par{
@@ -298,12 +296,14 @@
                 font-family: 600;
             }
 
-            .pressed-other{
+            .items
+            {
                 display: none;
             }
 
-            .is-pressed-course{
-                display: contents;
+            .active
+            {
+                display: block;
             }
 
 
@@ -338,8 +338,7 @@
     
                 <div class="navigation-overview-div">
                     <p class="Navigation-rightSection" onclick="
-                        display('Overview');
-                        displayContent('middle-section-else');
+                        display('overview');
                     ">
                         Overview
                     </p>    
@@ -347,9 +346,7 @@
     
                 <div class="navigation-overview-div">
                     <p class="Navigation-rightSection" onclick="
-                        displayContent('entry-div');
-                        removeOverview();
-                        
+                        display('entry-div');
                     ">
                         Entry And participation requirements
                     </p>    
@@ -365,8 +362,7 @@
     
                 <div class="navigation-overview-div">
                     <p class="Navigation-rightSection" onclick="
-                        removeOverview();
-                        displayContent('course-div');
+                        display('course-div');
                     ">
                         Course Structure
                     </p>    
@@ -461,41 +457,44 @@
     
             </div>
 
-            <div class="middle-section-body">
-                
-                <div class="unit-title">
+            
+
+            <div class="middle-section-body" id="container">
+
+                <div class="unit-title active">
                     <p class="unit-title-par">
                         ICT302 - IT Professional Practice Project
                     </p>
                 </div>
 
-                <div class="overview-div">
-                    <p class="overview-title-par">
-                        Overview
-                    </p>
-                </div>
-
-                <div class="middle-section-else">
-                    <div class="overview-par-div">
-                        <p class="overview-par">
-                            The Bachelor of Commerce (BCom) at Melbourne equips graduates with the knowledge and technical skills necessary to understand and participate in the modern business world. The course also prepares students for subsequent graduate studies and allows them to achieve the highest level of success in their professional careers.
+                <div class="overview-container items" id="overview">
+    
+                    <div class="overview-div">
+                        <p class="overview-title-par">
+                            Overview
                         </p>
-
-                        <p class="overview-par">
-                            The Bachelor of Commerce provides a solid foundation in economics, accounting, finance, quantitative methods and organisational behaviour. The structure of the course requires students to study compulsory and elective subjects from the core program. These determine a student's major field of study.
-                        </p>
-
-
-                    </div>      
-                    
-                    <div class="middle-section-div2">
-                        <img class="img-overview" src="Assets/table.png">
                     </div>
-
-                    
+    
+                    <div class="middle-section-else">
+                        <div class="overview-par-div">
+                            <p class="overview-par">
+                                The Bachelor of Commerce (BCom) at Melbourne equips graduates with the knowledge and technical skills necessary to understand and participate in the modern business world. The course also prepares students for subsequent graduate studies and allows them to achieve the highest level of success in their professional careers.
+                            </p>
+    
+                            <p class="overview-par">
+                                The Bachelor of Commerce provides a solid foundation in economics, accounting, finance, quantitative methods and organisational behaviour. The structure of the course requires students to study compulsory and elective subjects from the core program. These determine a student's major field of study.
+                            </p>
+    
+    
+                        </div>      
+                        
+                        <div class="middle-section-div2">
+                            <img class="img-overview" src="Assets/table.png">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="entry-div">
+                <div class="entry-div items" id="entry-div">
                     <div class="title-entry-div">
                         <p class="overview">
                             Entry And participation requirements
@@ -564,7 +563,7 @@
                     </div>
                 </div>
 
-                <div class="course-div">
+                <div class="course-div items" id="course-div">
                     
                     <div>
                         <p class="overview">
@@ -627,34 +626,28 @@
                             Electives are chosen from any subject offered within the Bachelor of Design. Prerequisites for some subjects will apply. Please check subject Handbook entries for prerequisite requirements.
                         </p>
                     </div>
-
                 </div>
-        
-                 
             </div>
+                
              
                  
         </div>
 
-        <script>
-            function display(attributesName) {
-                document.querySelector('.overview-title-par').innerHTML = attributesName;
-            }
-
-            function displayContent(divName){
-                document.querySelector(`.${divName}`).classList.add('is-pressed');
-            }
-
-            function removeOverview(){
-                document.querySelector('.middle-section-else').classList.add('pressed-other');
-
-                document.querySelector('.overview-div').classList.add('pressed-other');
-            }
-
-        </script>
         
     </body>
+        <script>
+            var temp = document.getElementById("overview");
+            temp.classList.add("active");
+            function display(id) {
+                temp.classList.remove("active");
+                var element = document.getElementById(id);
+                temp = element;
+                temp.classList.remove("active");
+                element.classList.add("active");
+            }
+        </script>
     <script>
+        /*
         // When the user scrolls the page, execute myFunction
         window.onscroll = function () { myFunction() };
 
@@ -672,5 +665,6 @@
                 navbar.classList.remove("sticky");
             }
         }
+        */
     </script>
 </html>
